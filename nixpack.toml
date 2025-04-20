@@ -1,2 +1,6 @@
 [phases.setup]
-nixPkgs = ["…", "ffmpeg"]
+aptPkgs = ["ffmpeg"]
+
+[phases.runtime]
+baseImage = "n8nio/n8n:latest"
+entrypoint = "npm start" # Or the command to start n8n
