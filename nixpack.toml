@@ -1,13 +1,2 @@
-[phases.build]
-cmds = [
-  "apk update",
-  "apk add --no-cache ffmpeg"
-]
-
-[phases.install]
-cmds = [] # n8n is already in the base image
-
-[phases.runtime]
-pkgs = []
-baseImage = "n8nio/n8n:latest"
-entrypoint = "npm start" # Or the command to start n8n in the base image
+[phases.setup]
+nixPkgs = ["…", "ffmpeg"]
