@@ -1,2 +1,8 @@
-[phases.setup]
-nixpkgs = ["ffmpeg"]
+[phases.build]
+cmds = [
+  "apk update",
+  "apk add --no-cache ffmpeg"
+]
+
+[phases.runtime]
+pkgs = [] # You might not need anything here for just running n8n
